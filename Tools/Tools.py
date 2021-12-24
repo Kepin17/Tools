@@ -710,21 +710,237 @@ def LK():
        
           break
     return output
+
+import random
+
+def Battle():
+    while True:
+        try:
+ 
+          print("\nSilahkan pilih hero kamu :\nA) Wiro Sableng\nB) Ninja\nC) Karina\nD) Ganyu ")
+          Hero = input("Your Choose A/B/C/D: ")
+        except ValueError:
+            print("Error,please try again!")
+            continue
+        else:
+            healtbar1 = random.randint(10,100)
+            attack1 = random.randint(10,100)
+            healtbar2 = random.randint(10,100)
+            attack2 = random.randint(10,100)
+            Attack1 = healtbar1 - attack2
+            Attack2 = healtbar2 - attack1
+            if Hero =="A":
+                heroName = "Wiro Sableng"
+                hero2 = ["Octo","Reamur","Yuki"]
+                player2 = random.choice(hero2)
+                if Attack1 < 0 and Attack2 < 0:
+
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage \nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        draw = F"\nDraw!!"
+                        output = [Battle,status , draw]
+        
+        
+                
+                elif Attack1 < 0 and Attack2 > 0:
+
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        lose = F"\nKalah!!"
+                        output = [Battle,status , lose]
+        
+                elif Attack1 > 0 and Attack2 < 0:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        win = f"\nMENANG!!"
+                        output = [Battle,status , win]
+              
+                elif Attack1 > Attack2:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        win = f"\nMENANG!!"
+                        output = [Battle,status , win]
+       
+                elif Attack1 < Attack2:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        win = f"\nKalah!!"
+                        output = [Battle,status , win]
+           
+            elif Hero =="B":
+                heroName = "Ninja"
+                hero2 = ["Octo","Reamur","Yuki"]
+                player2 = random.choice(hero2)
+                if Attack1 < 0 and Attack2 < 0:
+
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage \nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        draw = F"\nDraw!!"
+                        output = [Battle,status , draw]
+        
+                
+                elif Attack1 < 0 and Attack2 > 0:
+
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        lose = F"\nKalah!!"
+                        output = [Battle,status , lose]
+        
+                elif Attack1 > 0 and Attack2 < 0:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        win = f"\nMENANG!!"
+                        output = [Battle,status , win]
+              
+                elif Attack1 > Attack2:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        win = f"\nMENANG!!"
+                        output = [Battle,status , win]
+       
+                elif Attack1 < Attack2:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        win = f"\nKalah!!"
+                        output = [Battle,status , win]
+       
+            elif Hero =="C":
+                heroName = "Karina"
+                hero2 = ["Octo","Reamur","Yuki"]
+                player2 = random.choice(hero2)
+
+                if Attack1 < 0 and Attack2 < 0:
+
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage \nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        draw = F"\nDraw!!"
+                        output = [Battle,status , draw]
+  
+                
+                elif Attack1 < 0 and Attack2 > 0:
+
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        lose = F"\nKalah!!"
+                        output = [Battle,status , lose]
+        
+                elif Attack1 > 0 and Attack2 < 0:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        win = f"\nMENANG!!"
+                        output = [Battle,status , win]
+        
+                elif Attack1 > Attack2:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        win = f"\nMENANG!!"
+                        output = [Battle,status , win]
+       
+                elif Attack1 < Attack2:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        win = f"\nKalah!!"
+                        output = [Battle,status , win]
+         
+            elif Hero =="D":
+                heroName = "Ganyu"
+                hero2 = ["Octo","Reamur","Yuki"]
+                player2 = random.choice(hero2)
+                if Attack1 < 0 and Attack2 < 0:
+
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage \nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        draw = F"\nDraw!!"
+                        output = [Battle,status , draw]
+        
+                elif Attack1 > Attack2:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        win = f"\nMENANG!!"
+                        output = [Battle,status , win]
+            
+                
+                elif Attack1 < 0 and Attack2 > 0:
+
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        lose = F"\nKalah!!"
+                        output = [Battle,status , lose]
+        
+                elif Attack1 > 0 and Attack2 < 0:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : {Attack1}\n\nYou Attack and give {attack1} damage\nEnemy Health : 0"
+                        win = f"\nMENANG!!"
+                        output = [Battle,status , win]
+       
+                elif Attack1 < Attack2:
+                        Battle = f"\nBattle start\n Hero 1 : {heroName}\n Hero 1 Health : {healtbar1}\n Hero 1 Attack : {attack1}\n\n Hero 2 : {player2}\n Hero 2 Health : {healtbar2}\n Hero 2 Attack : {attack2} "
+                        Attack1 = healtbar1 - attack2
+                        Attack2 = healtbar2 - attack1
+                        status = f"\n{50*'='}\nEnemy attack and give {attack2} damage\nYour Health : 0\n\nYou Attack and give {attack1} damage\nEnemy Health : {Attack2}"
+                        win = f"\nKalah!!"
+                        output = [Battle,status , win]
+        
+                  
+            else:
+                    print("Option invalid!")
+
+
+        break        
+    return output      
 confirm = "y"
 while confirm=="y":
 
     print('\n=================Kevien Tools=================\n')
     input_name = str(input("Please enter your name : "))
-    y = input(f"\n Hi {input_name}! \n What do you want to do :\n Fun :\n 1.1 Love\n 1.2 Work\n Games :\n 2.1 Rock Sciccors and Pappe\n 2.2 Coming Soon!\n Calculating :\n 3.1 Temperature\n 3.2 Calculator\n 3.3 Bangun Datar\n Economy :\n 4.1 Python Bank\n Your Choose (Example : 1.1) : ")
+    y = input(f"\n Hi {input_name}! \n What do you want to do :\n Fun :\n 1.1 Love\n 1.2 Work\n Games :\n 2.1 Rock Sciccors and Pappe\n 2.2 Battle game\n 2.3 Coming Soon!\n Calculating :\n 3.1 Temperature\n 3.2 Calculator\n 3.3 Bangun Datar\n Economy :\n 4.1 Python Bank\n Your Choose (Example : 1.1) : ")
     if y=="1.1":
       output_name = love()
-      print("\nYour Name : {}".format(output_name[0]))
+      print(50*"=","\nYour Name : {}".format(output_name[0]))
       print("Your Girlfriend : {}".format(output_name[1]))
       print("Love Status : {}".format(output_name[2]))
 
     elif y=="1.2":
       output_name = work()
-      print("\nYour Name : {}".format(output_name[0]))
+      print(50*"=","\nYour Name : {}".format(output_name[0]))
       print("Your Work : {}".format(output_name[1]))
       print("Your Salary : ${}".format(output_name[2]))
       print("Date Work : {}".format(output_name[3]))
@@ -732,25 +948,31 @@ while confirm=="y":
 
     elif y=="2.1":
       output_name = suit()
-      print("Your Result : {}".format(output_name[0]))
+      print(50*"=","\nYour Result : {}".format(output_name[0]))
       
     elif y=="3.1":
       output_name = Temp()
-      print("{}".format(output_name[0]))
+      print(50*"=","\n{}".format(output_name[0]))
    
     elif y=="3.2":
       output_name = Calc()
-      print("\nYour Result : {}".format(output_name[0]))
+      print(50*"=","\nYour Result : {}".format(output_name[0]))
 
     elif y=="3.3":
       output_name = LK()
-      print("\nKeliling : {}".format(output_name[0]))
+      print(50*"=","\nKeliling : {}".format(output_name[0]))
       print("\nLuas     : {}".format(output_name[1]))
 
     elif y=="4.1":
       output_name = Atm()
       print("{}".format(output_name[0]))
       print("{}".format(output_name[1]))
+  
+    elif y=="2.2":
+      output_name = Battle()
+      print("{}".format(output_name[0]))
+      print("{}".format(output_name[1]))
+      print("{}".format(output_name[2]))
 
     else:
         print("\nError! Please Try Again!\n")
