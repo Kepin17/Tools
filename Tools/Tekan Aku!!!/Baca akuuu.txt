@@ -1,8 +1,0 @@
-Create By Kevien OJ
-Copyright 2021
-
-How to install
--Extrak
--Pilih Tools
--Kalau ada peringatan dari win def, tekan run
--Enjoy
